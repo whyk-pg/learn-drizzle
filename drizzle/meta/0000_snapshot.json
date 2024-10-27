@@ -91,12 +91,8 @@
           "name": "tbl_movieinfo_theater_id_tbl_theater_id_fk",
           "tableFrom": "tbl_movieinfo",
           "tableTo": "tbl_theater",
-          "columnsFrom": [
-            "theater_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["theater_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -104,17 +100,13 @@
       "compositePrimaryKeys": {
         "tbl_movieinfo_id": {
           "name": "tbl_movieinfo_id",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "uniqueConstraints": {
         "tbl_movieinfo_id_unique": {
           "name": "tbl_movieinfo_id_unique",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "checkConstraint": {}
@@ -142,23 +134,17 @@
       "compositePrimaryKeys": {
         "tbl_theater_id": {
           "name": "tbl_theater_id",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "uniqueConstraints": {
         "tbl_theater_id_unique": {
           "name": "tbl_theater_id_unique",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         },
         "tbl_theater_name_unique": {
           "name": "tbl_theater_name_unique",
-          "columns": [
-            "name"
-          ]
+          "columns": ["name"]
         }
       },
       "checkConstraint": {}
