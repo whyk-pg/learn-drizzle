@@ -2,17 +2,20 @@
   "scripts": {
     "check": "biome check --unsafe .",
     "format": "pnpm check --write",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "db:seed": "tsx --env-file=.env db/seed.ts"
   },
   "volta": {
     "node": "20.16.0"
   },
   "packageManager": "pnpm@9.4.0",
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3"
+    "@biomejs/biome": "^1.8.3",
+    "tsx": "^4.19.2"
   },
   "dependencies": {
     "@tidbcloud/serverless": "^0.2.0",
+    "@types/node": "^22.8.1",
     "drizzle-kit": "^0.26.2",
     "drizzle-orm": "^0.35.3"
   }

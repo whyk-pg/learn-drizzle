@@ -8,7 +8,7 @@ TiDB ServerlessとDrizzleツール群を利用して、DB周りを楽したい
 
 ## 本リポジトリの達成目標
 - [x] シネログのスキーマを移植し、Drizzle Kitで移行ファイルを生成
-- [ ] Seedデータの反映スクリプトを作成
+- [x] Seedデータの反映スクリプトを作成
 - [ ] HonoでREST APIを構築し、CRUDを構築
 - [ ] シネログの新しいスキーマを反映し、Drizzle Kitで移行ファイルを生成
 - [ ] Drizzle QueriesでCRUDを再構築
