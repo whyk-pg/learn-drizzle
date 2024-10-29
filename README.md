@@ -1,10 +1,13 @@
 # Learn Drizzle feat. TiDB Serverless
 <!-- ![Status: ToDo](https://flat.badgen.net/static/Status/ToDo/red) -->
-![Status: In Progress](https://flat.badgen.net/static/Status/In%20Progress/yellow)
+<!-- ![Status: In Progress](https://flat.badgen.net/static/Status/In%20Progress/yellow) -->
 <!-- ![Status: Done](https://flat.badgen.net/static/Status/Done/green) -->
+![Status: Deprecated](https://flat.badgen.net/static/Status/Deprecated/black)
 
 ## 本リポジトリの目的
-TiDB ServerlessとDrizzleツール群を利用して、DB周りを楽したい
+TiDB ServerlessとDrizzleツール群を利用して、DB周りを楽したい  
+→ 新しいスキーマを部分的に適用してみたところ、1年前以上前から続く`drizzle-kit generate`のバグを踏んで進行不可になったため断念  
+https://github.com/drizzle-team/drizzle-kit-mirror/issues/67
 
 ## 本リポジトリの達成目標
 - [x] シネログのスキーマを移植し、Drizzle Kitで移行ファイルを生成

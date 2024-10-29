@@ -8,40 +8,40 @@ import {
   varchar,
 } from "drizzle-orm/mysql-core";
 
-export const movieTable = mysqlTable("tbl_movieinfo", {
+export const moviesTable = mysqlTable("movies", {
   /** ID */
   id: serial("id").autoincrement().primaryKey().unique(),
   /** 作品タイトル */
   title: varchar("title", { length: 246 }).notNull(),
-  /** 吹替版かどうか */
-  is_dubbed: boolean("is_dubbed").notNull(),
-  /** 国内映画かどうか */
-  is_domestic: boolean("is_domestic").notNull(),
-  /** 実写かどうか */
-  is_live_action: boolean("is_live_action").notNull(),
-  /** 上映館テーブルID */
-  theater_id: int("theater_id")
-    .notNull()
-    .references(() => theaterTable.id),
+  /** 字幕版かどうか */
+  isSubtitles: boolean("is_subtitles").notNull(),
+  /** 上映劇場ID */
+  theaterId: int("theater_id").notNull(),
   /** 上映開始日時 */
-  view_start_datetime: datetime("view_start_datetime", {
+  viewStartDatetime: datetime("view_start_datetime", {
     mode: "string",
   }).notNull(),
   /** 上映終了日時 */
-  view_end_datetime: datetime("view_end_datetime", {
+  viewEndDatetime: datetime("view_end_datetime", {
     mode: "string",
   }).notNull(),
-  /** 同伴者数 */
-  accompanier: int("accompanier"),
+  /** 制作者所属国ID */
+  creatersCountryId: int("creaters_country_id").notNull(),
+  /** 作品形式ID */
+  movieFormatId: int("movie_format_id").notNull(),
+  /** 上映形式ID */
+  screeningFormatId: int("screening_format_id").notNull(),
   /** 5段階評価 */
   rating: int("rating"),
+  /** 同行者数 */
+  companionsCount: int("companions_count"),
   /** コメント */
   comment: text("comment"),
 });
 
-export const theaterTable = mysqlTable("tbl_theater", {
+export const theatersTable = mysqlTable("theaters", {
   /** ID */
   id: serial("id").autoincrement().primaryKey().unique(),
   /** 上映館 */
-  name: varchar("name", { length: 246 }).notNull().unique(),
+  name: varchar("name", { length: 100 }).notNull().unique(),
 });
